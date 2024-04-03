@@ -4,24 +4,20 @@
 import { useState } from "react";
 import React from "react";
 const Counter = () => {
-  let [counter, setCounter] = useState(10);
+  const [counter, setCounter] = useState(10);
 
   // counter = 15;
   const addValue = () => {
     console.log("Clicked", counter);
     if (counter < 20) {
-      counter = counter + 1;
+      setCounter(counter+ 1);
     }
-
-    setCounter(counter);
   };
   const removeValue = () => {
     console.log("Clicked", counter);
     if (counter > 0) {
-      counter = counter - 1;
+      setCounter(counter - 1);
     }
-
-    setCounter(counter);
   };
   return (
     <>
