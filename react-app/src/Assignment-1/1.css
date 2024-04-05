@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .question-1 {
+    justify-content: center;
+    align-items: center;
+  }
+  .user-card{
+    display: flex;
+    justify-content: space-between;
+   
+  }
+  .user{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .button-style{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .counterr{
+    display: flex;
+    justify-content: space-between;
+  }
