@@ -1,19 +1,20 @@
-import  { useState } from 'react'
+import { useState } from "react";
 
-    
-const useLocalStorage = (keyy,defaultvalue) => {
-    const[state,setState]=useState('');
+const useLocalStorage = () => {
+  const [state, setState] = useState("");
 
-    const setting=(value)=>{
-      localStorage.setItem('key',value)
-      setState(value)
-    }
+  const setting = (value) => {
+    localStorage.setItem("key", value);
+    setState(value);
+  };
+  const getting = () => {
+    localStorage.getItem("key");
+  };
+  const removing = () => {
+    localStorage.removeItem("key");
+  };
 
-   const removing=()=>{
-    localStorage.removeItem('keyy')
-   }
+  return { state, setting, removing, getting };
+};
 
-      return {state,setting,removing}
-}
-
-export default useLocalStorage
+export default useLocalStorage;
