@@ -16,7 +16,7 @@ const Counter = () => {
   const removeValue = () => {
     console.log("Clicked", counter);
     if (counter > 0) {
-      setCounter(counter - 1);
+      setCounter(counter- 1);
     }
   };
   return (
