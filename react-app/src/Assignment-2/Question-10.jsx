@@ -6,24 +6,26 @@
 
 import React, { createContext, useContext, useState } from "react";
 
-const languageContext = createContext();
+const LanguageContext = createContext();
 
 const LanguageSwitcher = () => {
   const [language, setLanguage] = useState("en");
 
   return (
-    <languageContext.Provider value={{ language, setLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      <h2>Language Switcher</h2>
       <div className="language">
         <Content />
       </div>
       <div className="langButton">
         <ButtonGroup />
       </div>
-    </languageContext.Provider>
+    </LanguageContext.Provider>
   );
 };
+
 const Content = () => {
-  const { language } = useContext(languageContext);
+  const { language } = useContext(LanguageContext);
 
   return (
     <div className="lang-content">
@@ -32,13 +34,16 @@ const Content = () => {
           <strong> This is the English version of the content.</strong>
         </p>
       ) : (
-        <p><strong>Esta es la versión en español del contenido.</strong></p>
+        <p>
+          <strong>Esta es la versión en español del contenido.</strong>
+        </p>
       )}
     </div>
   );
 };
+
 const ButtonGroup = () => {
-  const { setLanguage } = useContext(languageContext);
+  const { setLanguage } = useContext(LanguageContext);
 
   return (
     <div className="button-group">

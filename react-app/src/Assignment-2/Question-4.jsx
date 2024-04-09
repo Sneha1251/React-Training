@@ -7,19 +7,21 @@ import React, { useState } from "react";
 
 const RandomNumberGenerator = () => {
   const [randomNumber, setRandomNumber] = useState(0);
-  function generateRandomNumber() {
+
+  const generateRandomNumber = () => {
     const randomNumberValue = Math.floor(Math.random() * 100) + 1;
     setRandomNumber(randomNumberValue);
-  }
+  };
+
   return (
     <>
+      <h2>Random Number Generator</h2>
       <div className="random-no">
         <p>Current Random Number :{randomNumber}</p>
-        <button onClick={generateRandomNumber}>
-          Generate Random number
-        </button>
+        <button onClick={generateRandomNumber}>Generate Random number</button>
       </div>
     </>
   );
 };
+
 export default RandomNumberGenerator;

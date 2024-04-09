@@ -8,11 +8,13 @@ import React, { useState } from "react";
 import useLocalStorage from "./useLocalStorage";
 
 const Storage = () => {
-  const { state: valuetoshow, setting, removing, getting } = useLocalStorage();
+  const { state: valueToShow, setting, removing, getting } = useLocalStorage();
   const [data, setData] = useState("");
+
   return (
     <div>
-      <h2>{valuetoshow}</h2>
+      <h2>Storage</h2>
+      <h2>{valueToShow}</h2>
       <label>Change Value</label>
       <input type="text" onChange={(e) => setData(e.target.value)} />
 

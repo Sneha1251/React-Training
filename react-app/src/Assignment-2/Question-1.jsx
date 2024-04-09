@@ -16,19 +16,24 @@ const Counter = () => {
     setCounter(count);
   };
 
-  const RemoveValue = () => {
+  const removeValue = () => {
     console.log("Clicked", count);
     count = count - 1;
     setCounter(count);
   };
+
   return (
     <>
-      <p>Counter: <strong>{count}</strong></p>
+      <h2>Counter</h2>
+      <p>
+        Counter: <strong>{count}</strong>
+      </p>
       <div className="addbutton">
         <button onClick={addValue}>Add Value</button>
-        <button onClick={RemoveValue}>Remove Value</button>
+        <button onClick={removeValue}>Remove Value</button>
       </div>
     </>
   );
 };
+
 export default Counter;

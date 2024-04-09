@@ -7,9 +7,11 @@ const useLocalStorage = () => {
     localStorage.setItem("key", value);
     setState(value);
   };
+
   const getting = () => {
     localStorage.getItem("key");
   };
+  
   const removing = () => {
     localStorage.removeItem("key");
   };
