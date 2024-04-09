@@ -1,19 +1,13 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const useClipboard = (text) => {
-  const [copied, setCopied] = useState(false);
+  const [input, setInput] = useState("");
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(text)
-      .then(() => {
-        setCopied(true); 
-      })
-      .catch(error => {
-        console.error('Failed to copy:', error);
-      });
+    window.navigator.clipboard.writeText(input);
   };
 
-  return { copied, copyToClipboard };
+  return { input, setInput, copyToClipboard };
 };
 
 export default useClipboard;

@@ -8,13 +8,18 @@ import React from "react";
 import useClipboard from "./useClipboard";
 
 const CopyTextButton = ({ text }) => {
-  const { copied, copyToClipboard } = useClipboard(text || "");
+  const { input, setInput, copyToClipboard } = useClipboard("");
 
   return (
     <div>
       <h2>Copy Text Button</h2>
-      <textarea value={text} />
-      <button onClick={copyToClipboard}>{copied ? "Copied!" : "Copy"}</button>
+      <textarea
+        value={input}
+        onChange={(e) => {
+          setInput(e.target.value);
+        }}
+      />
+      <button onClick={copyToClipboard}>{input ? "Copied!" : "Copy"}</button>
     </div>
   );
 };

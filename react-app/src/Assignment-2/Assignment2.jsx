@@ -19,7 +19,7 @@ import {
   CopyTextButton,
   Storage,
   UserTimer,
-} from "./index2.jsx";
+} from "./index.jsx";
 
 function Assignment2() {
 
