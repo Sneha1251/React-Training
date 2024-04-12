@@ -2,14 +2,24 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 //import App from './App';
 import reportWebVitals from "./reportWebVitals";
-import Assignment4 from "./Assignment-4/Assignment4";
+//import Assignment4 from "./Assignment-4/Assignment4";
+import Assignment5 from "./Assignment-5/Assignment5";
 import { BrowserRouter } from "react-router-dom";
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+
+const client = new ApolloClient({
+  uri: "https://countries.trevorblades.com/graphql",
+  cache: new InMemoryCache(),
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
     <BrowserRouter>
-      <Assignment4 />
+      <ApolloProvider client={client}>
+        {/* <Assignment4 /> */}
+        <Assignment5 />
+      </ApolloProvider>
     </BrowserRouter>
   </>
 );
