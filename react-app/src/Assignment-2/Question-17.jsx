@@ -8,7 +8,8 @@ import React from "react";
 import useClipboard from "./useClipboard";
 
 const CopyTextButton = ({ text }) => {
-  const { input, setInput, copyToClipboard } = useClipboard("");
+  const { input, setInput, copyToClipboard, isSuccess, setIsSuccess } =
+    useClipboard("");
 
   return (
     <div>
@@ -17,9 +18,12 @@ const CopyTextButton = ({ text }) => {
         value={input}
         onChange={(e) => {
           setInput(e.target.value);
+          setIsSuccess(false);
         }}
       />
-      <button onClick={copyToClipboard}>{input ? "Copied!" : "Copy"}</button>
+      <button onClick={copyToClipboard}>
+        {isSuccess ? "Copied!" : "Copy"}
+      </button>
     </div>
   );
 };
