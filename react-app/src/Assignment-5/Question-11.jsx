@@ -8,7 +8,7 @@ const MyQuery = gql`
     countries {
       name
       phone
-      currency
+      currenc
     }
   }
 `;
@@ -19,13 +19,19 @@ export default function GraphQlError() {
   console.log(error, loading, data);
 
   if (loading) return "Loading...";
-  if (error) return <h2 className="error">{error.message}</h2>;
+  if (error)
+    return (
+      <>
+        <h2>GraphQL Error Handling</h2>
+        <h2 className="error">{error.message}</h2>
+      </>
+    );
 
   return (
     <>
       <h2>GraphQl Error handling</h2>
       <div className="graphQlApi">
-      {data.countries.slice(0, 12).map((countries) => {
+        {data.countries.slice(0, 12).map((countries) => {
           return (
             <div>
               <h2>{countries.name}</h2>

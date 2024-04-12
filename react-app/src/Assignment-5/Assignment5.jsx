@@ -18,6 +18,7 @@ import {
   HOC2,
   HocApi,
 } from "./index.jsx";
+
 function Assignment5() {
   return (
     <>
@@ -108,4 +109,5 @@ function Assignment5() {
     </>
   );
 }
+
 export default Assignment5;

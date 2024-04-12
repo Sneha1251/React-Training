@@ -78,9 +78,9 @@ export default function GraphQlApi() {
 
   return (
     <>
-      <h2>GraphQl Apollo Client</h2>
+      <h2>GraphQl Mutation</h2>
       <div className="graphQlApi">
-        {data.countries.slice(0,12).map((country) => (
+        {data.countries.slice(0, 12).map((country) => (
           <div key={country.name}>
             <h2>{country.name}</h2>
             <h3>{country.phone}</h3>
@@ -117,4 +117,3 @@ export default function GraphQlApi() {
     </>
   );
 }
-

@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 const withAuth = (WrappedComponent) => {
   const NewComponent = () => {
-    const navigate = useNavigate(-1);
+    const navigate = useNavigate();
     const isAuthenticated = localStorage.getItem("login");
 
-    if (isAuthenticated !== true) {
+    if (isAuthenticated !== "true") {
       navigate("/login");
     }
 

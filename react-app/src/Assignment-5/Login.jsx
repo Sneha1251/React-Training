@@ -8,14 +8,16 @@ const Login = () => {
 
   const login = () => {
     if (name === "Sneha" && password === "123456") {
-      localStorage.setItem("login", true);
+      localStorage.setItem("login", "true");
     }
-    localStorage.getItem("login") ? navigate("/about") : navigate("/login");
+    localStorage.getItem("login") === "true"
+      ? navigate("/about")
+      : navigate("/login");
   };
 
   return (
     <>
-      <div>
+      <div className="auth">
         <input
           type="text"
           placeholder="enter name"

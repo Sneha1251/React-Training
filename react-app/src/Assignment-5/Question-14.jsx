@@ -9,10 +9,12 @@ import About from "./About";
 const HocAuthenticated = () => {
   return (
     <Routes>
-      <Route exact path="/login" element={<Login />} />
-      <Route element={<Protected />} />
-      <Route exact path="/about" element={<About />} />
+      <Route path="/login" element={<Login />} />
+      <Route element={<Protected />}>
+        <Route path="/about" element={<About />} />
+      </Route>
     </Routes>
   );
 };
+
 export default HocAuthenticated;
