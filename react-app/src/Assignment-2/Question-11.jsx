@@ -15,16 +15,20 @@ const ShoppingCart = () => {
   const addToCart = (product) => {
     setCart([...cart, product]);
   };
+
   const removeFromCart = (index) => {
     const updatedCart = [...cart];
     updatedCart.splice(index, 1);
     setCart(updatedCart);
   };
+
   const getTotalPrice = () => {
     return cart.reduce((total, product) => total + product.price, 0);
   };
+
   return (
     <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+      <h2>Shopping Cart</h2>
       <div className="Cart">
         <ProductList />
         <Cart />
@@ -33,6 +37,7 @@ const ShoppingCart = () => {
     </CartContext.Provider>
   );
 };
+
 const ProductList = () => {
   const products = [
     { id: 1, name: "Laptop", price: 70000 },
@@ -41,7 +46,9 @@ const ProductList = () => {
     { id: 4, name: "Phone", price: 25000 },
     { id: 5, name: "Watch", price: 3000 },
   ];
+
   const { addToCart } = useContext(CartContext);
+
   return (
     <div className="product-list">
       <h2>Products</h2>
@@ -56,11 +63,12 @@ const ProductList = () => {
     </div>
   );
 };
+
 const Cart = () => {
   const { cart, removeFromCart } = useContext(CartContext);
   return (
     <div className="cart">
-        <h2>Shopping Cart</h2>
+      <h2>Shopping Cart</h2>
       <ul>
         {cart.map((product, index) => (
           <li key={index}>
@@ -72,4 +80,5 @@ const Cart = () => {
     </div>
   );
 };
+
 export default ShoppingCart;

@@ -15,16 +15,18 @@ const ThemeSwitcher = () => {
     if (theme === "light") setTheme("dark");
     else setTheme("light");
   };
-  
+
   return (
     <ThemeContext.Provider value={theme}>
-      <div className={`App ${theme}`}>
+      <h2>Theme Switcher</h2>
+      <div className={`app ${theme}`}>
         <button onClick={toggleTheme}>Toggle Theme</button>
         <Content />
       </div>
     </ThemeContext.Provider>
   );
 };
+
 const Content = () => {
   const theme = useContext(ThemeContext);
   return (
@@ -34,8 +36,10 @@ const Content = () => {
     </div>
   );
 };
+
 const Button = () => {
   const theme = useContext(ThemeContext);
   return <button className={`button ${theme}`}>Click Me</button>;
 };
+
 export default ThemeSwitcher;

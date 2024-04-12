@@ -12,23 +12,28 @@ const ToDoList = () => {
   const addTodo = () => {
     setTodos([...todos, { text: "", completed: false }]);
   };
+
   const removeTodo = (index) => {
     const updatedTodos = [...todos];
     updatedTodos.splice(index, 1);
     setTodos(updatedTodos);
   };
-  const TextChange = (index, newText) => {
+
+  const textChange = (index, newText) => {
     const updatedTodos = [...todos];
     updatedTodos[index].text = newText;
     setTodos(updatedTodos);
   };
+
   const toggleCompleted = (index) => {
     const updatedTodos = [...todos];
     updatedTodos[index].completed = !updatedTodos[index].completed;
     setTodos(updatedTodos);
   };
+
   return (
     <>
+      <h2>ToDo List</h2>
       <div className="add-task">
         <button onClick={addTodo}>Add Todo</button>
       </div>
@@ -40,7 +45,7 @@ const ToDoList = () => {
                 <input
                   type="text"
                   value={todo.text}
-                  onChange={(e) => TextChange(index, e.target.value)}
+                  onChange={(e) => textChange(index, e.target.value)}
                 />
                 <input
                   type="checkbox"
@@ -56,4 +61,5 @@ const ToDoList = () => {
     </>
   );
 };
+
 export default ToDoList;

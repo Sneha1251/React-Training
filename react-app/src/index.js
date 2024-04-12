@@ -4,11 +4,15 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import Assignment3 from "./Assignment-3/Assignment3";
 import { BrowserRouter } from "react-router-dom";
+import Assignment from "./Assignment-1/Assignment";
+import Assignment2 from "./Assignment-2/Assignment2";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
     <BrowserRouter>
+      <Assignment />
+      <Assignment2 />
       <Assignment3 />
     </BrowserRouter>
   </>

@@ -19,11 +19,14 @@ const Notification = () => {
       };
     }
   }, [message]);
+
   const showMessage = () => {
     setMessage("Notification Message!");
   };
+
   return (
     <>
+      <h2>Notification</h2>
       <div className="notification">
         <strong>{message}</strong>
       </div>
@@ -33,4 +36,5 @@ const Notification = () => {
     </>
   );
 };
+
 export default Notification;
