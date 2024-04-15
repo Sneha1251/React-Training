@@ -5,7 +5,7 @@ import {
   NestedRoute,
   Detail,
   ProtectedAuthentication,
-} from "./index3.jsx";
+} from "./index.jsx";
 import { NavLink } from "react-router-dom";
 import "./3.css";
 
@@ -16,10 +16,12 @@ const Assignment3 = () => {
         <h2>Question-1</h2>
         <AuthProvider />
       </div>
+
       <div className="question-2">
         <h2>Question-2</h2>
         <PreferencesProvider />
       </div>
+
       <div className="question-3">
         <h2>Question-3</h2>
         <Routing />
@@ -27,11 +29,12 @@ const Assignment3 = () => {
           <NavLink exact to="/">
             Home
           </NavLink>
-          <NavLink exact to="/about">
+          <NavLink exact to="/aboutt">
             About Us
           </NavLink>
         </div>
       </div>
+
       <div className="question-4">
         <h2>Question-4</h2>
         <ProtectedAuthentication />
@@ -47,6 +50,7 @@ const Assignment3 = () => {
           </NavLink>
         </div>
       </div>
+
       <div className="question-5">
         <h2>Question-5</h2>
         <NestedRoute />
@@ -65,6 +69,7 @@ const Assignment3 = () => {
           </NavLink>
         </div>
       </div>
+
       <div className="question-6">
         <h2>Question-6</h2>
         <Detail />

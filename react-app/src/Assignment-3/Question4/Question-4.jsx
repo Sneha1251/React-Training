@@ -10,14 +10,14 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
 import Home from "../Question3/Home";
 import About from "../Question4/About";
-import Protected from "../Question4/Protected";
+import AuthenticationProtected from "../Protected";
 
 const ProtectedAuthentication=()=>{
  return(
     <Routes>
     <Route exact path="/login" element={<Login />} />
     <Route exact path="/" element={<Home />} />
-    <Route exact path='/about' element={<Protected Component={About}/>}/>
+    <Route exact path='/about' element={<AuthenticationProtected Item={About}/>}/>
   </Routes>
  );
 }

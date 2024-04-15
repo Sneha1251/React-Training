@@ -12,6 +12,7 @@ import Home from "../Question3/Home";
 import About from "../Question4/About";
 import Profile from "./Profile";
 import Settings from "./Settings";
+import AuthenticationProtected from "../Protected";
 
 const NestedRoute = () => {
   return (
@@ -20,7 +21,7 @@ const NestedRoute = () => {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
-        <Route exact path="/dashboard" element={<Dashboard />}>
+        <Route exact path="/dashboard" element={<AuthenticationProtected Item={Dashboard}/>}>
           <Route exact path="/dashboard/profile" element={<Profile />} />
           <Route exact path="/dashboard/settings" element={<Settings />} />
         </Route>

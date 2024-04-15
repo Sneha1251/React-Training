@@ -12,11 +12,12 @@ import Home from "../Question3/Home";
 import About from "../Question4/About";
 import Products from "./Products";
 import AllProducts from "./AllProducts";
+import AuthenticationProtected from "../Protected";
 
 function Detail() {
   return (
     <Routes>
-      <Route path="/products/" element={<AllProducts />} />
+      <Route path="/products/" element={<AuthenticationProtected Item={AllProducts}/>} />
       <Route path="/products/:id" element={<Products />} />
       <Route exact path="/login" element={<Login />} />
       <Route exact path="/" element={<Home />} />
