@@ -2,10 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 //import App from './App';
 import reportWebVitals from "./reportWebVitals";
-import Assignment3 from "./Assignment-3/Assignment3";
 import { BrowserRouter } from "react-router-dom";
 import Assignment from "./Assignment-1/Assignment";
 import Assignment2 from "./Assignment-2/Assignment2";
+import Assignment3 from "./Assignment-3/Assignment3";
+import Assignment4 from "./Assignment-4/Assignment4";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +15,7 @@ root.render(
       <Assignment />
       <Assignment2 />
       <Assignment3 />
+      <Assignment4 />
     </BrowserRouter>
   </>
 );
