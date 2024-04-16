@@ -24,7 +24,6 @@ const DropDownMenu = () => {
       </div>
       <div className="dropdownshow">
         <p>
-          {" "}
           <strong>{show}</strong>
         </p>
       </div>

@@ -9,6 +9,7 @@ const InputControlledComponent = () => {
   const onClickChange = () => {
     setShowValue(true);
   };
+  
   return (
     <div>
       <div className="input">

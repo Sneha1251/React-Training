@@ -16,10 +16,11 @@ const Registration = () => {
       alert("Password not Matched");
     }
   };
+
   return (
     <div>
       <div className="input-password">
-        <label for="password">Password:</label>
+        <label>Password:</label>
         <input
           type="password"
           value={password}
@@ -28,7 +29,7 @@ const Registration = () => {
           }}
           placeholder="Password"
         />
-        <label for="con-password"> Confirm-Password:</label>
+        <label> Confirm-Password:</label>
         <input
           type="password"
           value={confirmPassword}
