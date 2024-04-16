@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Protected = (props) => {
-  const { Component } = props;
+const AuthenticationProtected = (props) => {
+  const { Item } = props;
   const navigate = useNavigate(-1);
 
   useEffect(() => {
-    let login = localStorage.getItem("login");
+    const login = localStorage.getItem("login");
     if (!login) {
       navigate("/login");
     }
   });
   return (
     <div>
-      <Component />
+      <Item />
     </div>
   );
 };
-export default Protected;
+export default AuthenticationProtected;

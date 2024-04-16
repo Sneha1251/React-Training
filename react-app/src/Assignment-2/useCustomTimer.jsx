@@ -11,9 +11,8 @@ const useCustomTimer = (duration) => {
       intervalId = setInterval(() => {
         setTimer((prevTimer) => prevTimer - 1);
       }, 1000);
-    } else {
-      clearInterval(intervalId);
     }
+
     return () => {
       clearInterval(intervalId);
     };
@@ -22,13 +21,16 @@ const useCustomTimer = (duration) => {
   const startTimer = () => {
     setIsActive(true);
   };
+
   const pauseTimer = () => {
     setIsActive(false);
   };
+
   const resetTimer = () => {
     setTimer(duration);
     setIsActive(false);
   };
+
   return { timer, startTimer, pauseTimer, resetTimer };
 };
 

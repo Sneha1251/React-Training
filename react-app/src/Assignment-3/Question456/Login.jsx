@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate} from "react-router-dom";
 
 const Login = () => {
-  const [name, setname] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const Navigate=useNavigate(-1)
   const login = () => {
@@ -17,19 +17,19 @@ const Login = () => {
       <div>
         <input
           type="text"
-          placeholder="enter name"
+          placeholder="Enter name"
           onChange={(e) => {
-            setname(e.target.value);
+            setName(e.target.value);
           }}
         />
         <input
           type="password"
-          placeholder="enter password"
+          placeholder="Enter password"
           onChange={(e) => {
             setPassword(e.target.value);
           }}
         />
-        <button onClick={login}>loggin</button>
+        <button onClick={login}>login</button>
       </div>
     </>
   );

@@ -19,21 +19,24 @@ const EmployeeSalary = () => {
     Pritam: "",
     Parth: "",
   });
+
   const averageSalary = useMemo(() => {
     const totalSalary = employees.reduce((total, emp) => total + emp.salary, 0);
     return totalSalary / employees.length;
   }, [employees]);
 
-  const UpdateSalaries = () => {
-    const updatedEmployees = employees.map(emp => ({
+  const updateSalaries = () => {
+    const updatedEmployees = employees.map((emp) => ({
       ...emp,
       salary: newSalaries[emp.name] || emp.salary,
     }));
     setEmployees(updatedEmployees);
-    setNewSalaries({ Alice: '', Bob: '', Charlie: '' });
+    setNewSalaries({ Alice: "", Bob: "", Charlie: "" });
   };
+
   return (
     <>
+      <h2>Employee Salary</h2>
       <div>
         <p>Average Salary: ${averageSalary.toFixed(2)}</p>
         <div className="salary">
@@ -55,10 +58,11 @@ const EmployeeSalary = () => {
               />
             </div>
           ))}
-        </div >
-        <button onClick={UpdateSalaries}>Update Salaries</button>
+        </div>
+        <button onClick={updateSalaries}>Update Salaries</button>
       </div>
     </>
   );
 };
+
 export default EmployeeSalary;

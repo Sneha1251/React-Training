@@ -6,17 +6,20 @@
 
 import CustomTimer from "./useCustomTimer";
 const UserTimer = () => {
-    const { timer, startTimer, pauseTimer, resetTimer } = CustomTimer(60);
-  
-    return (
-      <div>
-        <h2>Countdown Timer: {timer}</h2>
-        <div className="countdown">
-          <button onClick={startTimer}>Start</button>
-          <button onClick={pauseTimer}>Pause</button>
-          <button onClick={resetTimer}>Reset</button>
-        </div>
+
+  const { timer, startTimer, pauseTimer, resetTimer } = CustomTimer(60);
+
+  return (
+    <div>
+      <h2>Employee Salary</h2>
+      <h2>Countdown Timer: {timer}</h2>
+      <div className="countdown">
+        <button onClick={startTimer}>Start</button>
+        <button onClick={pauseTimer}>Pause</button>
+        <button onClick={resetTimer}>Reset</button>
       </div>
-    );
-  };
+    </div>
+  );
+};
+
 export default UserTimer;

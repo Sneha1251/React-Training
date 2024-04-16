@@ -4,17 +4,25 @@
 // Return a success status and methods to trigger the copying action.
 // Develop a component that uses the useClipboard hook to provide a copy button for text.
 
-import React from 'react';
-import useClipboard from './useClipboard';
+import React from "react";
+import useClipboard from "./useClipboard";
 
 const CopyTextButton = ({ text }) => {
-  const { copied, copyToClipboard } = useClipboard(text || '');
+  const { input, setInput, copyToClipboard, isSuccess, setIsSuccess } =
+    useClipboard("");
 
   return (
     <div>
-      <textarea value={text} />
+      <h2>Copy Text Button</h2>
+      <textarea
+        value={input}
+        onChange={(e) => {
+          setInput(e.target.value);
+          setIsSuccess(false);
+        }}
+      />
       <button onClick={copyToClipboard}>
-        {copied ? 'Copied!' : 'Copy'}
+        {isSuccess ? "Copied!" : "Copy"}
       </button>
     </div>
   );
