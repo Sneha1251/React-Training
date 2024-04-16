@@ -9,10 +9,14 @@ import { useState } from "react";
 
 const PersonForm = () => {
   const [firstName, setFirstName] = useState("");
+
   const [lastName, setLastName] = useState("");
+  
   const [age, setAge] = useState("");
+
   return (
     <>
+      <h2>Person Form</h2>
       <div className="personDetail">
         <input
           type="text"
@@ -47,4 +51,5 @@ const PersonForm = () => {
     </>
   );
 };
+
 export default PersonForm;

@@ -14,7 +14,6 @@ export default function ValidationTextFields() {
   
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
-    // Simple validation example: Check if the first name is empty
     if (event.target.value.trim() === '') {
       setFirstNameError(true);
     } else {

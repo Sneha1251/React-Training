@@ -18,8 +18,10 @@ const Clock = () => {
       clearInterval(intervalId);
     };
   });
+
   return (
     <>
+      <h2>Clock</h2>
       <div className="time">
         <p>
           Current Time: <strong>{time}</strong>
@@ -28,4 +30,5 @@ const Clock = () => {
     </>
   );
 };
+
 export default Clock;

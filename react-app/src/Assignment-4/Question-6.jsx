@@ -7,11 +7,12 @@ const ToDoList = () => {
   const [newTask, setNewTask] = useState("");
 
   const AddTask = () => {
-    if(newTask){
-        setTask([...task,newTask]);
-        setNewTask("");
+    if (newTask) {
+      setTask([...task, newTask]);
+      setNewTask("");
     }
   };
+
   return (
     <div>
       <div className="addTask">
@@ -25,8 +26,8 @@ const ToDoList = () => {
       </div>
       <div className="taskList">
         <ul>
-          {task.map((tasks, index) => (
-            <li key={index}>{tasks}</li>
+          {task.map((tasks) => (
+            <li key={tasks.id}>{tasks}</li>
           ))}
         </ul>
       </div>

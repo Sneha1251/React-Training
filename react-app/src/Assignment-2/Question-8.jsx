@@ -7,24 +7,29 @@ import { useEffect, useState } from "react";
 import imagedata from "./ImageData";
 
 const Slideshow = () => {
-  const imageurls = imagedata;
+  const imageUrls = imagedata;
 
-  const [currentslide, setCurrentSlide] = useState(0);
-  const [isplaying, setIsPlaying] = useState(false);
-  const [intervalid, setIntervalId] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const [interValid, setIntervalId] = useState(null);
 
   const nextSlide = () => {
-    setCurrentSlide((currentslide) => (currentslide + 1) % imageurls.length);
+    setCurrentSlide((currentslide) => (currentslide + 1) % imageUrls.length);
   };
-  const Playslide = () => {
+
+  const playSlide = () => {
     setIsPlaying(true);
   };
-  const Pauseshow = () => {
+
+  const pauseShow = () => {
     setIsPlaying(false);
   };
+
   useEffect(() => {
-    if (isplaying) {
-      if (!intervalid) {
+    if (isPlaying) {
+      if (!interValid) {
         const id = setInterval(() => {
           nextSlide();
           setIntervalId((prevIntervalId) =>
@@ -33,20 +38,22 @@ const Slideshow = () => {
         }, 2000);
       }
     } else {
-      clearInterval(intervalid);
+      clearInterval(interValid);
 
       setIntervalId(null);
     }
-    return () => clearInterval(intervalid);
-  }, [isplaying]);
+
+    return () => clearInterval(interValid);
+  }, [isPlaying]);
 
   return (
     <>
-      <img src={imageurls[currentslide]} />
-      <button onClick={Playslide} style={{ margin: "1rem" }}>
+      <h2>Slide Show</h2>
+      <img src={imageUrls[currentSlide]} />
+      <button onClick={playSlide} style={{ margin: "1rem" }}>
         Play
       </button>
-      <button onClick={Pauseshow}>Pause</button>
+      <button onClick={pauseShow}>Pause</button>
     </>
   );
 };

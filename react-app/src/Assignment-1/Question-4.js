@@ -13,11 +13,12 @@ const Counter = () => {
       setCounter(counter+ 1);
     }
   };
+
   const removeValue = () => {
     console.log("Clicked", counter);
       setCounter(counter- 1);
-    }
   };
+  
   return (
     <>
       <h2>Counter value: {counter}</h2>

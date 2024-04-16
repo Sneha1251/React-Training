@@ -13,6 +13,7 @@ const FormComponent = () => {
       alert("Form is Submitted");
     }
   };
+
   return (
     <>
       <div className="form-element">

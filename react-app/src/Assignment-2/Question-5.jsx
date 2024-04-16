@@ -15,26 +15,31 @@ const CounterWithStep = () => {
     setCounter(count + step);
   };
 
-  const RemoveValue = () => {
+  const removeValue = () => {
     setCounter(count - step);
   };
-  const stepChange = (e) => {
-    const newStep = parseInt(e.target.value);
-    setStep(newStep);
-  };
+
   return (
     <>
+      <h2>Counter With Step</h2>
       <p>
         Counter: <strong>{count}</strong>
       </p>
       <div className="inceasebutton">
         <button onClick={addValue}>Increase ValuIe</button>
-        <button onClick={RemoveValue}>Decrease Value</button>
+        <button onClick={removeValue}>Decrease Value</button>
       </div>
       <div className="step">
-        <input type="number" value={step} onChange={stepChange}></input>
+        <input
+          type="number"
+          value={step}
+          onChange={(e) => {
+            setStep(parseInt(e.target.value));
+          }}
+        ></input>
       </div>
     </>
   );
 };
+
 export default CounterWithStep;
