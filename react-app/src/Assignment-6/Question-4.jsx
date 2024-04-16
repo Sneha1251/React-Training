@@ -1,6 +1,5 @@
 // You are given a simple form component (LoginForm) that contains input fields for username and password, as well as a submit button. Create test cases to verify that the form fields can be filled, and the submit button works correctly.
 
-// LoginForm.js
 import React, { useState } from "react";
 
 const LoginForm = () => {
@@ -8,7 +7,12 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
+    const i = 9;
+
     console.log("Form Submitted", username, password);
+    if (i === 9) {
+      throw new Error("Crashed");
+    }
   };
 
   return (
@@ -33,6 +37,7 @@ const LoginForm = () => {
           }}
         />
       </div>
+
       <div className="submitButton">
         <button onClick={handleSubmit}>Submit</button>
       </div>

@@ -6,6 +6,7 @@ import Assignment4 from "./Assignment-4/Assignment4";
 import Assignment5 from "./Assignment-5/Assignment5";
 import Assignment6 from "./Assignment-6/Assignment6";
 import { BrowserRouter } from "react-router-dom";
+
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
@@ -18,9 +19,11 @@ root.render(
   <>
     <BrowserRouter>
       <ApolloProvider client={client}>
-        <Assignment4 />
-        <Assignment5 />
-        <Assignment6 />
+        {/* <Assignment4 />
+          <Assignment5 /> */}
+        
+          <Assignment6 />
+        {/* </ErrorBoundary> */}
       </ApolloProvider>
     </BrowserRouter>
   </>

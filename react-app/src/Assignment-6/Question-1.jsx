@@ -2,14 +2,14 @@
 
 import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import { ErrorBoundary } from "react-error-boundary";
+
 
 const Home = lazy(() => import("./Home"));
 const About = lazy(() => import("./About"));
 
 const LazyLoading = () => {
   return (
-    <ErrorBoundary fallback={<h1>Error Loading Page</h1>}>
+   
       <Suspense
         fallback={
           <div>
@@ -22,7 +22,6 @@ const LazyLoading = () => {
           <Route path="/about" element={<About />} />
         </Routes>
       </Suspense>
-    </ErrorBoundary>
   );
 };
 

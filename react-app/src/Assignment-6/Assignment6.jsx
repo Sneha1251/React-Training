@@ -1,12 +1,14 @@
 import {
   LazyLoading,
-  ErrorBoundary,
+  ErrorCounter,
   Counter,
   LoginForm,
   UserProfile,
   ModalComponent,
 } from "./index";
 import "./6.css";
+import { ErrorBoundary } from "react-error-boundary";
+// import MyErrorBoundary from "./Question-2";
 
 function Assignment6() {
   return (
@@ -16,10 +18,6 @@ function Assignment6() {
         <LazyLoading />
       </div>
 
-      <div className="question-2">
-        <h2>Question 2</h2>
-        <ErrorBoundary />
-      </div>
 
       <div className="question-3">
         <h2>Question 3</h2>
@@ -28,7 +26,9 @@ function Assignment6() {
 
       <div className="question-4">
         <h2>Question 4</h2>
-        <LoginForm />
+        {/* <MyErrorBoundary fallback={"Error Loading Page"}>
+          <LoginForm />
+        </MyErrorBoundary> */}
       </div>
 
       <div className="question-5">
