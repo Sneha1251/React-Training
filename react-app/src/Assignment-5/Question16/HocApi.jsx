@@ -22,4 +22,5 @@ const HocApi = ({data}) => {
     </>
   );
 };
+
 export default withDataFetching(HocApi);

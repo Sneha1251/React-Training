@@ -7,6 +7,7 @@ import Protected from "./Protected";
 import About from "./About";
 
 const HocAuthenticated = () => {
+  
   return (
     <Routes>
       <Route path="/login" element={<Login />} />

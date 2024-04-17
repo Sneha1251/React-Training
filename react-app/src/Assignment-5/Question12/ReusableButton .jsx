@@ -4,6 +4,7 @@ import React from "react";
 import ReuseButton from "./reuseButton";
 
 const ReusableButton = () => {
+  
   return (
     <>
       <h2>Resuable Button Component</h2>
@@ -13,11 +14,13 @@ const ReusableButton = () => {
           style={{ background: "green", color: "white" }}
           onClick={() => alert("Primary button clicked")}
         ></ReuseButton>
+
         <ReuseButton
           label="Secondary Button"
           style={{ background: "yellow", color: "black" }}
           onClick={() => alert("Secondary button clicked")}
         ></ReuseButton>
+
         <ReuseButton
           label="Danger Button"
           style={{ background: "red", color: "white" }}

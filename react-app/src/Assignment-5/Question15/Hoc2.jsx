@@ -3,7 +3,8 @@
 import React from "react";
 import withLogger from "./withLogger";
 
-const HOC2 = ({ increment, count }) => {
+const Hoc2 = ({ increment, count }) => {
+  
   return (
     <>
       <h2>HOC Mounting, Unmounting, Update</h2>
@@ -16,4 +17,4 @@ const HOC2 = ({ increment, count }) => {
   );
 };
 
-export default withLogger(HOC2);
+export default withLogger(Hoc2);
