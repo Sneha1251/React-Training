@@ -1,0 +1,55 @@
+.card {
+  padding: 2em;
+  border: 1px solid #888;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.6rem;
+}
+.error {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+.reuseButton {
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+button {
+  padding: 1rem;
+}
+.modalComponent {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.withLogger {
+  display: flex;
+  justify-content: center;
+}
+.pageButton {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.graphQlApi {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.6rem;
+}
+.link {
+  display: flex;
+  justify-content: center;
+  border: 5rem;
+  border-color: blue;
+  margin-top: 25px;
+}
+.link a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  background-color: #1c3964;
+}
