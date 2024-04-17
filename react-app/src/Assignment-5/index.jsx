@@ -1,35 +1,35 @@
-import FetchData from "./Question-1";
-import ErrorHandling from "./Question-2";
-import LoadingIndicator from "./Question-3";
-import Pagination from "./Question-4";
-import AxiosData from "./Question-5";
-import AxiosErrorHandling from "./Question-6";
-import AxiosPost from "./Question-7";
-import GraphQlApi from "./Question-8";
-import GraphQlPagination from "./Question-9";
-import GraphQlMutation from "./Question-10";
-import GraphQlError from "./Question-11"
-import ReusableButton from "./Question-12";
-import BasicModal from "./Question-13";
-import HocAuthenticated from './Question-14'
-import HOC2 from "./Question-15";
-import HocApi from "./Question-16";
+import Question1 from "./Question1";
+import Question2 from "./Question2";
+import Question3 from "./Question3";
+import Question4 from "./Question4";
+import Question5 from "./Question5";
+import Question6 from "./Question6";
+import Question7 from "./Question7";
+import Question8 from "./Question8";
+import Question9 from "./Question9";
+import Question10 from "./Question10";
+import Question11 from "./Question11";
+import Question12 from "./Question12";
+import Question13 from "./Question13";
+import Question14 from "./Question14";
+import Question16 from "./Question16";
+import Question15 from "./Question15";
 
 export {
-  FetchData,
-  ErrorHandling,
-  LoadingIndicator,
-  Pagination,
-  AxiosData,
-  AxiosErrorHandling,
-  AxiosPost,
-  GraphQlApi,
-  GraphQlPagination,
-  GraphQlMutation,
-  GraphQlError,
-  ReusableButton,
-  BasicModal,
-  HocAuthenticated,
-  HOC2,
-  HocApi,
+  Question1,
+  Question2,
+  Question3,
+  Question4,
+  Question5,
+  Question6,
+  Question7,
+  Question8,
+  Question9,
+  Question10,
+  Question11,
+  Question12,
+  Question13,
+  Question14,
+  Question16,
+  Question15,
 };

@@ -1,95 +1,96 @@
 import { NavLink } from "react-router-dom";
 import "./5.css";
 import {
-  FetchData,
-  ErrorHandling,
-  LoadingIndicator,
-  Pagination,
-  AxiosData,
-  AxiosErrorHandling,
-  AxiosPost,
-  GraphQlApi,
-  GraphQlPagination,
-  GraphQlMutation,
-  GraphQlError,
-  ReusableButton,
-  BasicModal,
-  HocAuthenticated,
-  HOC2,
-  HocApi,
+  Question1,
+  Question2,
+  Question3,
+  Question4,
+  Question5,
+  Question6,
+  Question7,
+  Question8,
+  Question9,
+  Question10,
+  Question11,
+  Question12,
+  Question13,
+  Question14,
+  Question16,
+  Question15,
 } from "./index.jsx";
 
 function Assignment5() {
+  
   return (
     <>
       <div className="question-1">
         <h2>Question 1</h2>
-        <FetchData />
+        <Question1 />
       </div>
 
       <div className="question-2">
         <h2>Question 2</h2>
-        <ErrorHandling />
+        <Question2 />
       </div>
 
       <div className="question-3">
         <h2>Question 3</h2>
-        <LoadingIndicator />
+        <Question3 />
       </div>
 
       <div className="question-4">
         <h2>Question 4</h2>
-        <Pagination />
+        <Question4 />
       </div>
 
       <div className="question-5">
         <h2>Question 5</h2>
-        <AxiosData />
+        <Question5 />
       </div>
 
       <div className="question-6">
         <h2>Question 6</h2>
-        <AxiosErrorHandling />
+        <Question6 />
       </div>
 
       <div className="question-7">
         <h2>Question 7</h2>
-        <AxiosPost />
+        <Question7 />
       </div>
 
       <div className="question-8">
         <h2>Question 8</h2>
-        <GraphQlApi />
+        <Question8 />
       </div>
 
       <div className="question-9">
         <h2>Question 9</h2>
-        <GraphQlPagination />
+        <Question9 />
       </div>
 
       <div className="question-10">
         <h2>Question 10</h2>
-        <GraphQlMutation />
+        <Question10 />
       </div>
 
       <div className="question-11">
         <h2>Question 11</h2>
-        <GraphQlError />
+        <Question11 />
       </div>
 
       <div className="question-12">
         <h2>Question 12</h2>
-        <ReusableButton />
+        <Question12 />
       </div>
 
       <div className="question-13">
         <h2>Question 13</h2>
-        <BasicModal />
+        <Question13 />
       </div>
 
       <div className="question-14">
         <h2>Question 14</h2>
-        <HocAuthenticated />
+        <Question14 />
         <div className="link">
           <NavLink exact to="/login">
             Login
@@ -99,12 +100,12 @@ function Assignment5() {
 
       <div className="question-15">
         <h2>Question 15</h2>
-        <HOC2 />
+        <Question15 />
       </div>
 
       <div className="question-16">
         <h2>Question 16</h2>
-        <HocApi />
+        <Question16 />
       </div>
     </>
   );

@@ -25,20 +25,26 @@ const reducer = (state, action) => {
       return state;
   }
 };
+
 const VotingApplication = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  
   return (
-    <div className="voting-app">
-      <button onClick={() => dispatch({ type: "VOTE-OPTION-A" })}>
-        Option A (<strong>{state.optionA}</strong>)
-      </button>
-      <button onClick={() => dispatch({ type: "VOTE-OPTION-B" })}>
-        Option B (<strong>{state.optionB}</strong>)
-      </button>
-      <button onClick={() => dispatch({ type: "VOTE-OPTION-C" })}>
-        Option C (<strong>{state.optionC}</strong>)
-      </button>
-    </div>
+    <>
+      <h2>Simple Voting App</h2>
+      <div className="voting-app">
+        <button onClick={() => dispatch({ type: "VOTE-OPTION-A" })}>
+          Option A (<strong>{state.optionA}</strong>)
+        </button>
+        <button onClick={() => dispatch({ type: "VOTE-OPTION-B" })}>
+          Option B (<strong>{state.optionB}</strong>)
+        </button>
+        <button onClick={() => dispatch({ type: "VOTE-OPTION-C" })}>
+          Option C (<strong>{state.optionC}</strong>)
+        </button>
+      </div>
+    </>
   );
 };
+
 export default VotingApplication;

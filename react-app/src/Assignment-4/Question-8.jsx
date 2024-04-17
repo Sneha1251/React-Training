@@ -11,11 +11,13 @@ const TemperatureConverter = () => {
     setCelsius(value);
     setFahenheit(((parseFloat(value) * 9) / 5 + 32).toFixed(2));
   };
+
   const FahrenheitChange = (e) => {
     const value = e.target.value;
     setFahenheit(value);
     setCelsius((((parseFloat(value) - 32) * 5) / 9).toFixed(2));
   };
+
   return (
     <div className="temperature">
       <label htmlFor="search">Celsius:</label>
@@ -25,7 +27,7 @@ const TemperatureConverter = () => {
         onChange={CelsiusChange}
         placeholder="Enter temperature in C"
       />
-      <label htmlFor="search">Fahrenheit:</label>
+      <label>Fahrenheit:</label>
       <input
         type="text"
         value={Fahrenheit}

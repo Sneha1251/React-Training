@@ -11,14 +11,17 @@ const StudentList = () => {
   const [newStudent, setNewStudent] = useState("");
 
   const memoizedStudents = useMemo(() => students, [students]);
-  const AddStudent = () => {
+
+  const addStudent = () => {
     if (newStudent) {
       setStudents([...students, newStudent]);
       setNewStudent("");
     }
   };
+
   return (
     <>
+      <h2>Student List</h2>
       <div className="student-list">
         <ul>
           {memoizedStudents.map((student, index) => (
@@ -32,9 +35,10 @@ const StudentList = () => {
           value={newStudent}
           onChange={(e) => setNewStudent(e.target.value)}
         />
-        <button onClick={AddStudent}>Add</button>
+        <button onClick={addStudent}>Add</button>
       </div>
     </>
   );
 };
+
 export default StudentList;

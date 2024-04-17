@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 //import App from './App';
 import reportWebVitals from "./reportWebVitals";
+import Assignment from "./Assignment-1/Assignment";
+import Assignment2 from "./Assignment-2/Assignment2";
+import Assignment3 from "./Assignment-3/Assignment3";
 import Assignment4 from "./Assignment-4/Assignment4";
 import Assignment5 from "./Assignment-5/Assignment5";
 import Assignment6 from "./Assignment-6/Assignment6";
@@ -19,11 +22,12 @@ root.render(
   <>
     <BrowserRouter>
       <ApolloProvider client={client}>
-        {/* <Assignment4 />
-          <Assignment5 /> */}
-        
-          <Assignment6 />
-        {/* </ErrorBoundary> */}
+        <Assignment />
+        <Assignment2 />
+        <Assignment3 />
+        <Assignment4 />
+        <Assignment5 />
+        <Assignment6 />
       </ApolloProvider>
     </BrowserRouter>
   </>
