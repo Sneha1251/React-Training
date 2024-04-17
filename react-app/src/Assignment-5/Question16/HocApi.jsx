@@ -3,7 +3,7 @@
 import React from "react";
 import withDataFetching from "./withDataFetching";
 
-const HocApi = ({data}) => {
+const HocApi = ({data=[]}) => {
 
   return (
     <>

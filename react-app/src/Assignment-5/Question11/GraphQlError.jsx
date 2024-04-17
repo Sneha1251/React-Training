@@ -14,7 +14,7 @@ const MyQuery = gql`
 `;
 
 export default function GraphQlError() {
-  const { error, data, loading } = useQuery(MyQuery);
+  const { error, data = {}, loading } = useQuery(MyQuery);
 
   console.log(error, loading, data);
 
@@ -31,12 +31,12 @@ export default function GraphQlError() {
     <>
       <h2>GraphQl Error handling</h2>
       <div className="graphQlApi">
-        {data.countries.slice(0, 12).map((countries) => {
+        {(data?.countries || []).slice(0, 12).map((country) => {
           return (
             <div>
-              <h2>{countries.name}</h2>
-              <h3>{countries.phone}</h3>
-              <h3>{countries.currency}</h3>
+              <h2>{country?.name}</h2>
+              <h3>{country?.phone}</h3>
+              <h3>{country?.currency}</h3>
             </div>
           );
         })}

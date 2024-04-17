@@ -17,7 +17,7 @@ export default function GraphQlPagination() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemPerPage = 4;
 
-  const { error, data, loading } = useQuery(MyQuery);
+  const { error, data={}, loading } = useQuery(MyQuery);
 
   console.log(error, loading, data);
   if (loading) return "Loading...";
@@ -25,18 +25,18 @@ export default function GraphQlPagination() {
 
   const startIndex = (currentPage - 1) * itemPerPage;
   const endIndex = startIndex + itemPerPage;
-  const miniData = data.countries.slice(startIndex, endIndex);
+  const miniData = (data?.countries || []).slice(startIndex, endIndex);
 
   return (
     <>
       <h2>GraphQl Pagination</h2>
       <div className="graphQlApi">
-        {miniData.slice(0, 12).map((countries) => {
+      {(miniData || []).slice(0, 12).map((country) => {
           return (
             <div>
-              <h2>{countries.name}</h2>
-              <h3>{countries.phone}</h3>
-              <h3>{countries.currency}</h3>
+              <h2>{country?.name}</h2>
+              <h3>{country?.phone}</h3>
+              <h3>{country?.currency}</h3>
             </div>
           );
         })}

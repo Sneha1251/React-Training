@@ -32,7 +32,7 @@ const DELETE_COUNTRY = gql`
 `;
 
 export default function GraphQlApi() {
-  const { error, data, loading } = useQuery(MyQuery);
+  const { error, data={}, loading } = useQuery(MyQuery);
   const [addCountry] = useMutation(ADD_COUNTRY);
   const [deleteCountry] = useMutation(DELETE_COUNTRY);
 
@@ -41,8 +41,6 @@ export default function GraphQlApi() {
   const [currency, setCurrency] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-
     try {
       const { data } = await addCountry({
         variables: { name, phone, currency },
@@ -80,11 +78,11 @@ export default function GraphQlApi() {
     <>
       <h2>GraphQl Mutation</h2>
       <div className="graphQlApi">
-        {data.countries.slice(0, 12).map((country) => (
+        {(data?.countries || []).slice(0, 12).map((country) => (
           <div key={country.name}>
-            <h2>{country.name}</h2>
-            <h3>{country.phone}</h3>
-            <h3>{country.currency}</h3>
+            <h2>{country?.name}</h2>
+            <h3>{country?.phone}</h3>
+            <h3>{country?.currency}</h3>
             <button onClick={() => handleDelete(country.name)}>Delete</button>
           </div>
         ))}
