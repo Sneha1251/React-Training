@@ -2,7 +2,7 @@
 
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import UserProfile from "./Question-5";
+import UserProfile from "./UserProfile";
 
 test("renders user profile information correctly", () => {
   const user = {

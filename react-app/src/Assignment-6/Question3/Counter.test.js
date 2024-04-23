@@ -1,7 +1,7 @@
 // Counter.test.js
 import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
-import Counter from "./Question-3";
+import Counter from "./Counter";
 
 test("Counter increments and decrements correctly", () => {
   render(<Counter />);

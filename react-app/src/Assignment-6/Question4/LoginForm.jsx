@@ -7,12 +7,7 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
-    const i = 9;
-
     console.log("Form Submitted", username, password);
-    if (i === 9) {
-      throw new Error("Crashed");
-    }
   };
 
   return (
@@ -20,6 +15,7 @@ const LoginForm = () => {
       <div className="login">
         <label>Username:</label>
         <input
+          data-testid="username"
           type="text"
           id="username"
           value={username}
@@ -29,6 +25,7 @@ const LoginForm = () => {
         />
         <label>Password:</label>
         <input
+          data-testid="password"
           type="password"
           id="password"
           value={password}

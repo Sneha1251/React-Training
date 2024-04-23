@@ -1,13 +1,7 @@
-import LazyLoading from "./Question-1";
-import Counter from "./Question-3";
-import LoginForm from "./Question-4";
-import UserProfile from "./Question-5";
-import ModalComponent from "./Question-6";
+import Question1 from "./Question1&2";
+import Question3 from "./Question3";
+import Question4 from "./Question4";
+import Question5 from "./Question5";
+import Question6 from "./Question6";
 
-export {
-  LazyLoading,
-  Counter,
-  LoginForm,
-  UserProfile,
-  ModalComponent,
-};
+export { Question1, Question3, Question4, Question5, Question6 };
