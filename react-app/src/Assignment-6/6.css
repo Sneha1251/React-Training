@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  justify-content: space-evenly;
+}
+.counter {
+  display: flex;
+  justify-content: space-evenly;
+}
+.login {
+  display: flex;
+  justify-content: space-evenly;
+}
+.submitButton {
+    margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
